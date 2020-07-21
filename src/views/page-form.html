@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/page-form.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/pop-up.css">
+
+
+
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div id="page-form">
+        <section class="main">
+            <!-- <header>
+                <a href="/"><img src="" alt=""></a>
+                <a href="/">
+                    <span id="img-login"></span>
+                    Voltar </a> -->
+
+            {% include "partials/page-header.html" %}
+            </header>
+        </section>
+
+        <form action="/saveFormData" method="POST">
+            <h1>Cadastro do Local</h1>
+
+            <fieldset>
+                <legend>
+                    <h2>Insira os dados do Local</h2>
+                </legend>
+                <section class="field-group">
+                    <div class="field">
+                        <label for="name">Nome do local</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="url">URL da imagem</label>
+                        <input type="url" name="image" required>
+                    </div>
+
+
+
+                </section>
+                <section class="field-group">
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    
+
+                    <div class="field">
+                        <label for="addressNum">Numero</label>
+                        <input type="text" name="addressNum" required>
+                    </div>
+                </section>
+
+                <section class="field-group">
+                    <div class="field">
+                        <label for="state">State</label>
+                        <select name="state" required>
+                            <option value="">Selecione o estado</option>
+                        </select>
+                        <input type="hidden" name="state2" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="city">City</label>
+                        <select name="city" disabled required>
+                            <option value="">Selecione a cidade</option>
+                        </select>
+                    </div>
+                </section>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Itens para venda</h2>
+                </legend>
+                <section class="items-grid">
+                    <input type="hidden" class="selected">
+
+                    <li data-id="Crochê">
+                        <img src="https://image.flaticon.com/icons/svg/2472/2472854.svg"
+                            alt="Crochê"><span>Crochê</span></li>
+
+                    <li data-id="Corte e Costura">
+                        <img src="https://image.flaticon.com/icons/svg/2972/2972124.svg"
+                            alt="máquina de costura"><span>Corte e Costura</span></li>
+
+                    <li data-id="Lingeries">
+                        <img src="https://image.flaticon.com/icons/svg/3126/3126709.svg"><span>Lingeries</span></li>
+
+                    <li data-id="Adornos">
+                        <img src="https://image.flaticon.com/icons/svg/2855/2855408.svg" alt="Colar"
+                            width="64px"><span>Semi Joias</span></li>
+
+                    <li data-id="Roupas">
+                        <img src="https://image.flaticon.com/icons/svg/3121/3121101.svg" alt="Camisa"><span>Roupas</span></li>
+
+                    <li data-id="Cosméticos">
+                        <img src="https://image.flaticon.com/icons/svg/3057/3057396.svg"><span>Cosméticos</span></li>
+
+                </section>
+                <input type="hidden" name="items">
+            </fieldset>
+
+            <button type="submit">Cadastrar </button>
+        </form>
+    </div>
+    {% if saved %}
+    {% include "partials/pop-up-page-form.html" %}
+    {% endif %}
+    
+    <script src="./scripts/page-form.js"></script>
+</body>
+
+</html>

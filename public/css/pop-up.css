@@ -1,0 +1,86 @@
+#pop-up {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(236, 198, 228);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms;
+
+}
+
+#pop-up.hide {
+    display: none;
+}
+
+#pop-up.content {
+    color: var(--title-color);
+    width: 300px;
+}
+
+#pop-up.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+
+}
+
+#pop-up .header a {
+    background-image: url("../icones/x.svg");
+    width: 20px;
+    height: 20px;
+    display: flex;
+    float: right;
+    font-size: 0.01px;
+}
+#pop-up .header h1 {
+    font-size: 32px;
+    line-height: 42px;
+}
+#pop-up form label {
+    font-size: 14px;
+    line-height: 16px;
+
+    display: block;
+    margin-bottom: 8px;
+
+}
+
+#pop-up form .field {
+    display: flex;
+}
+
+#pop-up form input {
+    flex: 1;
+    background-color: #f0f0f5;
+    border-radius: 8px 0 0 8px;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+}
+#pop-up button {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    border: 0;
+    border-radius:0 8px 8px 0;
+}
+
+#pop-up button:hover {
+    background-color: rgb(173, 132, 173);
+}
+
+/* estilo css do pop-up-page-form */
+#pop-up.check .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#pop-up.check .content h1 {
+    margin-top: 20px;
+}

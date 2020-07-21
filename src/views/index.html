@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/page-home.css">
+    <link rel="stylesheet" href="./css/pop-up.css">
+
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page-home">
+        <section class="main">
+            <header>
+                <h1>Loja Do Local </h1>
+                <a href="/page-form">
+                    <span id="img-login"></span>
+                    Cadastre seu negócio</a>
+            </header>
+            <main>
+                <h1>Do Local<br>
+                    Encontre negócios perto de você
+                </h1>
+                <div id="searchBtn">
+                    <a><span></span> <strong>Pesquise sua compra local</strong></a>
+                </div>
+            </main>
+        </section>
+    </div>
+<!-- Uso do nunjucks -->
+    {% include 'partials/pop-up.html'%}
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>

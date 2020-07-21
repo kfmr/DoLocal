@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/results-page.css">
+
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <title>Resultado da pesquisa</title>
+</head>
+
+<body>
+    <div id="page-results">
+        <!-- Substituido pelo page-header com o uso do nunjucks -->
+            <!-- <header>
+                
+                </a>
+            </header> -->
+
+            {% include 'partials/page-header.html'%}
+            <main>
+                {% if total > 0 %}
+                <h2><strong>{{total}} </strong> 
+                    {% if total > 1 %}
+                    locais 
+                    {%else%}
+                    Do Local
+                    {% endif %}
+                    perto de você </h2>
+                    
+            <div class="cards">
+                
+                {% for sale in salers %}
+                <div class="card">
+                    <img src="{{sale.image}}" alt="{{sale.name}}">
+                    <h2>{{sale.name}}</h2>
+                    <h4>{{sale.items}}</h4>
+                    <p>{{sale.city}}, {{sale.state}} <br>
+                        {{sale.address}}, {{sale.addressNum}}
+
+                    </p>    
+                </div>
+                {% endfor %}
+
+                {% else %}
+                <h4><span>Nenhum</span> local cadastrado</h4>
+                {% endif %}
+            </main>
+        </section>
+    </div>
+
+   
+    <script src="./scripts/homepage.js"></script>
+</body>
+
+</html>

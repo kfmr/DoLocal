@@ -1,0 +1,154 @@
+body {
+    background-color: #FAE9D5;
+}
+#page-form {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-form header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#page-form header a {
+    color: var(--title-color);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+#page-form header a span {
+    background-image: url("../icones/arrow-left.svg");
+    width: 20px;
+    height: 24px;
+    display: flex;
+    margin-right: 10px;
+
+}
+
+form {
+    background-color: #c28285;
+    margin: 80px auto;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 730px;
+    
+}
+
+form h1 {
+    font-size: 30px;
+    
+}
+
+form fieldset {
+    margin-top: 64px;
+    border:0 
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 20px;
+}
+
+form .field {
+    flex: 1;
+
+    display: flex;
+    
+    flex-direction: column;
+    margin-bottom: 24px;
+    margin-left: 10px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+form .field-group {
+    display: flex;
+}    
+
+form input, form select {
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    
+}
+
+form select {
+    --webkit-appearance: none;
+    --moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: #ff8c00;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border:0;
+    margin-top: 30px;
+    transition: background-color: 400ms;
+    cursor: pointer;
+} 
+
+form button:hover {
+    background-color: #ffa500;
+    
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+.items-grid li {
+    list-style: none;
+    border: 2px solid #f5f5f5;
+    height: 150px;
+    border-radius:  8px;
+    padding: 20x 10px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.items-grid li img {
+    margin-top: 16px;
+}
+
+.items-grid li span {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+
+.items-grid li.selected {
+    background-color: #e1faec;
+    border: 2px solid skyblue;
+}
+
+.items-grid li img, span {
+    pointer-events: none;
+    width: 64px;
+}
